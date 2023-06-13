@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exercise_3</title>
+  <link rel="stylesheet" href="CSS/style3.css">
+</head>
+<body>
+
+  <div class="box">
+   
+        <p id="result"></p>
+        <button onclick="showHistoryLength()">Показать количество записей в истории браузера</button>
+        
+        
+        
+  </div>    
+   
+  <script type="text/javascript">
+    
+        // Задание 3
+        // Создайте HTML-страницу, разместите на ней кнопку. По нажатию на кнопку должно выводиться количество записей
+        // в истории браузера. Проверьте работоспособность кнопки, переходя на страницу с различными параметрами
+        // (exc3.html?page = 1, exc3.html?page = 2, exc3.html?page = 3).
+
+
+function showHistoryLength() {
+    var length = history.length;  
+     var result = document.getElementById("result"); 
+  result.textContent = "Количество записей в истории браузера: " + length;
+}
+
+
+  
+  </script>
+  
+</body>
+</html>

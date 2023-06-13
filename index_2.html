@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exercise_2</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+  <div class="box">
+    <div class="blockList">
+      <h1>Список установленных языков:</h1>
+      <ol id="languageList"></ol>
+    </div>
+  </div>    
+   
+  <script type="text/javascript">
+    
+// Задание 2
+// Создайте HTML-страницу, при загрузке которой будет отображаться список установленных в системе языков.
+// Предпочтительный язык выделите жирным шрифтом.
+
+
+var languages = window.navigator.languages;
+
+for (var i = 0; i < languages.length; i++) {
+  var li = document.createElement("li");
+  if (i == 0) {                               // определяем и выделяем язык приортета 
+    li.setAttribute("lang", languages[i]);
+    li.style.fontWeight = "bold";
+  }
+
+  li.textContent = languages[i] + " - " + getLangName(languages[i]);
+  // console.log(li.textContent);
+  document.getElementById("languageList").appendChild(li);
+}
+
+function getLangName(cod) {    // объект с кодами и названиями языков
+  var langNames = {
+    "ru-RU": "Русский",
+    "ru": "Русский",
+    "en-US": "Английский - раскладка США",
+    "en": "Английский",
+    "uk": "Украинский",
+    "de": "Немецкий",
+    "fr": "Французский",
+    "es": "Испанский"    
+  };
+  // Возвращаем название языка по коду или пустую строку, если код не найден
+  return langNames[cod] || "";
+}
+
+  
+  </script>
+  
+</body>
+</html>

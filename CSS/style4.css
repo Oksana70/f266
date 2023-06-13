@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    height: 0;
+    box-sizing: border-box;
+    color:#343a40; 
+}
+.box{
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f1f6fa;
+    padding: 50px;
+    text-align: center;
+}
+
+button{
+    width: 250px;
+    height: 50px; 
+    padding: 10px;  
+    font-size: 1rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 30px;
+}
+#btnRefresh{    
+    background-color:#efd356;
+    color:#343a40; 
+    border-color: #c79704;  
+}
+#btnOn{    
+    background-color:#10f022;
+    color:#343a40; 
+    border-color: #0ec159;  
+}
+#btnOff{
+    background-color: #586e8b;
+    color: rgba(255, 255, 255, 0.683);
+    border-color: #3e4d62;
+}
+#btnRefresh:hover, #btnRefresh:focus{
+    background-color: #ffc107;
+    color: white;
+}
+#btnOn:hover, #btnOn:focus{
+    background-color: #28b30c;
+    color: white;
+}
+#btnOff:hover, #btnOff:focus{
+    background-color: #3e4d62;
+    color: white;
+}
+iframe {
+    width: 500px;
+    height: 300px;
+    border: none;
+ }
+ h2{
+    margin: auto;    
+    height: 100px;
+ }
+ ul{
+    height: 200px;
+ }
+ li{
+    height: 40px;
+    text-align: left;
+    font-size: 18px;
+ }
+
+

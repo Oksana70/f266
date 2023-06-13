@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exercise_4</title>
+  <link rel="stylesheet" href="CSS/style4.css">
+</head>
+<body>
+  
+      <div class="box">
+        <h2>Информация о устройстве и браузере:</h2>
+        <ul id="infoList">
+         
+        </ul>
+        
+        <button id="btnOff" >Закрыть вкладку</button>        
+        <button id="btnRefresh">Обновить вкладку</button>        
+        <button id="btnOn">Открыть фрейм</button>
+        
+        <iframe id="frame" src="" style="display:none"></iframe>
+      </div>
+     
+   
+  <script type="text/javascript">
+    
+// Задание 4
+// Поприветствовать пользователя на нашем сайте, ниже
+// разместить:
+// - размер экрана;
+// - версия браузера;
+// - включены ли Cookie;
+// - протокол текущей страницы;
+// - кнопка с функционалом закрытия вкладки;
+// - кнопка с функционалом обновления текущей вкладки;
+// - кнопку с открытием фрейма (фрейм на ваше усмотрение).
+
+// Создаем массив 
+var info = [
+  "Размер экрана: " + screen.width + " x " + screen.height + " пикселей",
+  "Версия браузера: " + navigator.userAgent,
+  "Включены ли Cookie: " + navigator.cookieEnabled,
+  "Протокол текущей страницы: " + location.protocol
+];
+
+var list = document.getElementById("infoList");
+
+for (var i = 0; i < info.length; i++) {
+  var li = document.createElement("li");
+  li.textContent = info[i];
+  list.appendChild(li);
+}
+
+// Функция закрытия вкладки
+btnOff.addEventListener("click",function(){
+  window.close(); 
+});
+// Функция перезагрузки
+btnRefresh.addEventListener("click",function(){
+  location.reload();
+})
+
+// Функция открытия фрейма
+btnOn.addEventListener("click", function(){  
+  var frame = document.getElementById("frame");  
+  frame.src = "https://itstep.org";  
+  frame.style.display = "block";
+})
+
+
+  </script>
+  
+</body>
+</html>
